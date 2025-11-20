@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Axiom Trade Token Discovery Table Replica
+
+A pixel-perfect, high-performance replica of the Axiom Trade Token Discovery Table built with Next.js 14, TypeScript, Tailwind CSS, and Redux Toolkit.
+
+## Features
+- 🚀 **Real-time Price Updates**: Mock WebSocket service simulating live market data.
+- 📊 **Advanced Sorting & Filtering**: Sort by any column, filter by category (New Pairs, Final Stretch, Migrated), and search tokens.
+- 🎨 **Pixel-Perfect UI**: "Dark mode crypto" aesthetic with smooth transitions and animations.
+- ⚡ **High Performance**: Optimized for speed with React.memo, virtualization-ready structure, and efficient state management.
+- 📱 **Fully Responsive**: Adaptive layout for mobile, tablet, and desktop.
+
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Shadcn/UI
+- **State Management**: Redux Toolkit
+- **Data Fetching**: React Query
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd axiom-trade-replica
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the app**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+```
+src/
+├── app/                  # Next.js App Router pages
+├── components/
+│   ├── ui/               # Shadcn/UI primitives
+│   ├── token-table/      # Token Table specific components
+│   └── providers.tsx     # Global providers (Redux, React Query)
+├── hooks/                # Custom hooks (useTokenData)
+├── lib/
+│   ├── features/         # Redux slices
+│   └── store.ts          # Redux store config
+├── services/             # Services (WebSocket mock)
+└── types/                # TypeScript definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Performance Optimization
+- **Memoization**: Components are memoized to prevent unnecessary re-renders.
+- **Efficient Updates**: WebSocket updates are batched and applied efficiently.
+- **Skeleton Loading**: Smooth loading states to prevent layout shifts.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
