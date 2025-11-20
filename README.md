@@ -59,5 +59,8 @@ src/
 - **Efficient Updates**: WebSocket updates are batched and applied efficiently.
 - **Skeleton Loading**: Smooth loading states to prevent layout shifts.
 
+## FrontPage SnapShot
+![Screenshot (83).png](https://github.com/Saptarshi-iitbhu/Eterna-Frontend-Assignment/blob/main/Screenshot%20(83).png)
+
 ## License
 MIT
